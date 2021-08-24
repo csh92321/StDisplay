@@ -4,7 +4,8 @@ public class StudentInfo {
 
 	private String name;
 	private int age;
-	private int kor, eng, math,avg;
+	private int kor, eng, math;
+	private double avg;
 	
 	
 	public String getName() {
@@ -37,12 +38,12 @@ public class StudentInfo {
 	public void setMath(int math) {
 		this.math = math;
 	}
-	public int getAvg() {
+	public double getAvg() {
 		return avg;
 	}
-	public void setAvg(int avg) {
+	public void setAvg(double avg) {
 		this.avg = avg;
 	}
-
+	
 	
 }

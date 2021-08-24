@@ -3,10 +3,13 @@ package stdisplay;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import stdisplay_grade_soyoung.Grade;
+
 public class Stdisplay {
 	public static void main(String[] args) {
 		
 		ArrayList<StudentInfo> std= new ArrayList<>(); 
+		Grade grade = new Grade();
 		
 		Scanner scan =new Scanner(System.in);
 		System.out.println("==== 학생 관리 프로그램====");
@@ -28,7 +31,7 @@ public class Stdisplay {
 			break;
 			// 학생 삭제
 		case 5:
-			// 성적 관리 / 소영님
+			grade.display();
 			break;
 		
 		}
