@@ -1,7 +1,9 @@
 package stdisplay;
 
 public class Stdisplay {
-	public void display() {
+	
+	public static void main(String[] args) {
+		
 		
 	}
 
