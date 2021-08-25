@@ -10,6 +10,7 @@ public class Grade {
 	StudentInfo si = new StudentInfo();
 	Stdisplay sd = new Stdisplay();
 	Scanner sc = new Scanner(System.in);
+	boolean flag=false;
 	
 	public void display() {
 		
@@ -25,6 +26,7 @@ public class Grade {
 			
 			switch(choice) {
 			case 1 :
+				flag=false;
 				System.out.print("학생 이름 입력 : ");
 				String stName = sc.next();
 				
@@ -32,14 +34,19 @@ public class Grade {
 					String name = sd.std.get(i).getName();
 					if (name.equals(stName)) {
 						putGrade(i);
+						flag=true;
 						break;
-					} else if (name==null){
-						System.out.println(stName + " 학생은 존재하지 않습니다");
+					} else {
+						flag=false;
 					}
-					
+				}
+				if (flag == false) {
+					System.out.println(stName + " 학생은 존재하지 않습니다");
 				}
 				break;
+				
 			case 2 : 
+				flag=false;
 				System.out.print("학생 이름 입력 : ");
 				stName = sc.next();
 				
@@ -48,14 +55,19 @@ public class Grade {
 					if (name.equals(stName)) {
 					System.out.println("<< "+stName+" 학생 성적표 >>");
 					checkGrade(i);
+					flag=true;
 					break;
-					} else if (name==null){
-						System.out.println(stName + " 학생은 존재하지 않습니다");
+					} else {
+						flag=false;
 					}
+				}
+				if (flag == false) {
+					System.out.println(stName + " 학생은 존재하지 않습니다");
 				}
 				break;
 				
 			case 3 :
+				flag=false;
 				System.out.print("학생 이름 입력 : ");
 				stName = sc.next();
 				
@@ -66,7 +78,13 @@ public class Grade {
 						System.out.print(">> ");
 						String subject = sc.next();
 						correctGrade(subject,i);
+						flag=true;
+					} else {
+						flag=false;
 					}
+				}
+				if (flag == false) {
+					System.out.println(stName + " 학생은 존재하지 않습니다");
 				}
 				break;
 			case 4 :
