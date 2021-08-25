@@ -4,6 +4,10 @@ import java.util.*;
 
 import stdisplay_delete_hjm.StdDelete;
 
+import stdisplay_registration_joohui.Registration_joohui;
+
+import stdisplay_grade_soyoung.Grade;
+
 public class Stdisplay {
 
 	private static ArrayList<StudentInfo> std = new ArrayList<>();
@@ -13,9 +17,15 @@ public class Stdisplay {
 	}
 
 	public static void main(String[] args) {
+		ArrayList<StudentInfo> std = new ArrayList<>();
+
 		Scanner scan = new Scanner(System.in);
+
 		StdDelete hjm = new StdDelete();
 
+		Registration_joohui re = new Registration_joohui();
+
+		Grade grade = new Grade();
 
 		while (true) {
 			System.out.println("==== 학생 관리 프로그램====");
@@ -24,17 +34,9 @@ public class Stdisplay {
 			int choice = scan.nextInt();
 			switch (choice) {
 			case 1:
-				StudentInfo st = new StudentInfo();
-				System.out.println(">>>");
-				String name = scan.next();
-				st.setName(name);
-				std.add(st);
+				re.display();
 				break;
 			case 2:
-				for (int i = 0; i < std.size(); i++) {
-					StudentInfo d = std.get(i);
-					System.out.println("asdfasdf:::" + d.getName());
-				}
 				break;
 			case 3:
 				break;
@@ -43,10 +45,11 @@ public class Stdisplay {
 				hjm.print();
 				break;
 			case 5:
-				// 성적 관리 / 소영님
+				grade.display();
 				break;
 
 			}
+
 		}
 
 	}
