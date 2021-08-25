@@ -33,18 +33,8 @@ public class Registration_joohui {
 		case 2:
 			System.out.println("목록으로 되돌아갑니다.");
 			return;
-		}	
-		
+				}	
+			}
 		} 
 	}
-	public void registration() {
-		String name;
-		int age;
-		System.out.println("이름: ");
-		name = input.next();
-		System.out.println("나이 : ");
-		age = input.nextInt();
-		
-		
-	}
-}
+
