@@ -4,10 +4,14 @@ package stdisplay_registration_joohui;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import stdisplay.Stdisplay;
 import stdisplay.StudentInfo;
 
 public class Registration_joohui {
 	private ArrayList<StudentInfo> list;
+	StudentInfo st = new StudentInfo();
+	Stdisplay s = new Stdisplay();
+	
 	public Registration_joohui(){	
 }
 	Scanner input = new Scanner(System.in);
@@ -27,6 +31,8 @@ public class Registration_joohui {
 		String name = input.next();
 		System.out.println("나이 : ");
 		int age = input.nextInt();
+		st.setName(name); st.setAge(age);
+		s.std.add(st);
 		System.out.println("등록 되었습니다.");
 		break;
 		

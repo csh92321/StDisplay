@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class Check {
 	private Scanner scanner;
 	private ArrayList arr;
+	private BSt std;
 	
 	public Check() {
 		scanner = new Scanner(System.in);
@@ -73,8 +74,7 @@ public class Check {
 		System.out.println("주소 입력");
 		addr = scanner.next();
 
-		b.setAddr(addr); b.setName(name);
-		((Map<String, BSt>) arr).put(name, b);
+		std.setAddr(addr); std.setName(name);
 
 		System.out.println("저장 완료");
 	}
