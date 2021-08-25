@@ -9,7 +9,6 @@ import stdisplay.StudentInfo;
 
 public class Registration_joohui {
 	private ArrayList<StudentInfo> list;
-	StudentInfo st = new StudentInfo();
 	Stdisplay s = new Stdisplay();
 	
 	public Registration_joohui(){	
@@ -26,6 +25,7 @@ public class Registration_joohui {
 		num = input.nextInt();
 		switch(num) {
 		case 1:
+			StudentInfo st = new StudentInfo();
 		System.out.println("학생 등록을 시작합니다.");
 		System.out.println("이름 : ");
 		String name = input.next();
