@@ -26,15 +26,15 @@ public class Registration_joohui {
 		switch(num) {
 		case 1:
 			StudentInfo st = new StudentInfo();
-		System.out.println("학생 등록을 시작합니다.");
-		System.out.println("이름 : ");
-		String name = input.next();
-		System.out.println("나이 : ");
-		int age = input.nextInt();
-		st.setName(name); st.setAge(age);
-		s.std.add(st);
-		System.out.println("등록 되었습니다.");
-		break;
+			System.out.println("학생 등록을 시작합니다.");
+			System.out.println("이름 : ");
+			String name = input.next();
+			System.out.println("나이 : ");
+			int age = input.nextInt();
+			st.setName(name); st.setAge(age);
+			s.std.add(st);
+			System.out.println("등록 되었습니다.");
+			break;
 		
 		case 2:
 			System.out.println("목록으로 되돌아갑니다.");

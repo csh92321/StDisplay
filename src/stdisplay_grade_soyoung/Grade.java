@@ -32,9 +32,9 @@ public class Grade {
 					String name = sd.std.get(i).getName();
 					if (name.equals(stName)) {
 						putGrade(i);
-						
-					} else {
-						System.out.println(stName+" 학생은 존재하지 않습니다");
+						break;
+					} else if (name==null){
+						System.out.println(stName + " 학생은 존재하지 않습니다");
 					}
 					
 				}
@@ -48,7 +48,8 @@ public class Grade {
 					if (name.equals(stName)) {
 					System.out.println("<< "+stName+" 학생 성적표 >>");
 					checkGrade(i);
-					} else {
+					break;
+					} else if (name==null){
 						System.out.println(stName + " 학생은 존재하지 않습니다");
 					}
 				}
