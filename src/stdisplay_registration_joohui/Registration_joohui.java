@@ -37,4 +37,14 @@ public class Registration_joohui {
 		
 		} 
 	}
+	public void registration() {
+		String name;
+		int age;
+		System.out.println("이름: ");
+		name = input.next();
+		System.out.println("나이 : ");
+		age = input.nextInt();
+		
+		
+	}
 }
