@@ -1,10 +1,13 @@
 package stdisplay;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import stdisplay_check_jch.Check;
 import stdisplay_delete_hjm.StdDelete;
-import stdisplay_registration_joohui.Registration_joohui;
 import stdisplay_grade_soyoung.Grade;
 import stdisplay_modify_csh.Modify;
+import stdisplay_registration_joohui.Registration_joohui;
 
 public class Stdisplay {
 
@@ -25,6 +28,7 @@ public class Stdisplay {
 		Registration_joohui re = new Registration_joohui();
 		Grade grade = new Grade();
 		Modify mod = new Modify();
+		Check jch = new Check();
 
 		while (true) {
 			System.out.println("==== 학생 관리 프로그램====");
@@ -38,8 +42,7 @@ public class Stdisplay {
 				break;
 			// 학생등록 / 주희님
 			case 2:
-				System.out.println("모든 학생 보기 기능");
-				System.out.println("학생 관리 연결");
+				jch.display();
 				break;
 			// 학생 확인 / 청하님
 			case 3:
