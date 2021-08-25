@@ -1,18 +1,5 @@
 package stdisplay;
 
-//성적 추가
-//학생등록 / 주희님
-
-// 성적 수정
-// 학생 확인  / 청하님
-
-//성적 검색
-//학생 수정  / 성환님 
-
-// 성적 삭제
-// 학생 삭제
-
-//모든 성적 확인
 import java.util.ArrayList;
 import java.util.Scanner;
 
