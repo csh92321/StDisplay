@@ -8,12 +8,8 @@ import stdisplay.Stdisplay;
 import stdisplay.StudentInfo;
 
 public class Registration_joohui {
-	private ArrayList<StudentInfo> list;
 	
 	Stdisplay s = new Stdisplay();
-	
-	public Registration_joohui(){	
-}
 	Scanner input = new Scanner(System.in);
 	
 	
@@ -24,10 +20,6 @@ public class Registration_joohui {
 		System.out.println("2.목록으로 돌아가기");
 		System.out.print(">>>> : ");
 		num = input.nextInt();
-		for(int i=0; i<s.std.size();i++) {
-			StudentInfo str = s.std.get(i);
-			System.out.println(str.getName());
-		}
 		switch(num) {
 		case 1:
 		StudentInfo st = new StudentInfo();
@@ -38,10 +30,6 @@ public class Registration_joohui {
 		int age = input.nextInt();
 		st.setName(name); st.setAge(age);
 		s.std.add(st);
-		for(int i=0; i<s.std.size();i++) {
-			StudentInfo str = s.std.get(i);
-			System.out.println(str.getName());
-		}
 		System.out.println("등록 되었습니다.");
 		break;
 		
