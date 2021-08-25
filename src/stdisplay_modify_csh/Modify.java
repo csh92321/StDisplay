@@ -17,7 +17,7 @@ public class Modify {
 			String stimo = s.std.get(i).getName();
 			if(stimo.equals(mody)) {
 				System.out.println("어느 정보를 수정하시겠습니까?");
-				System.out.print("1.이름 2.나이");
+				System.out.println("1.이름 2.나이");
 				int se = scan.nextInt();
 				cnt = 1;
 				switch(se) {
