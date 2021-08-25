@@ -4,9 +4,16 @@ public class StudentInfo {
 
 	private String name;
 	private int age;
+<<<<<<< HEAD
 	private int kor, eng, math,avg;
 
 
+=======
+	private int kor, eng, math;
+	private double avg;
+	
+	
+>>>>>>> cbfe33aac84ff25ed08a2d79d618392db802b706
 	public String getName() {
 		return name;
 	}
@@ -37,6 +44,7 @@ public class StudentInfo {
 	public void setMath(int math) {
 		this.math = math;
 	}
+<<<<<<< HEAD
 	public int getAvg() {
 		return avg;
 	}
@@ -46,3 +54,14 @@ public class StudentInfo {
 
 
 }
+=======
+	public double getAvg() {
+		return avg;
+	}
+	public void setAvg(double avg) {
+		this.avg = avg;
+	}
+	
+	
+}
+>>>>>>> cbfe33aac84ff25ed08a2d79d618392db802b706
