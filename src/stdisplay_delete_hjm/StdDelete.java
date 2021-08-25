@@ -37,7 +37,6 @@ public class StdDelete {
 
 		System.out.println("==== 학생 삭제 ====");
 		System.out.println("학생 이름 입력 ");
-		System.out.print(">>>");
 		check();
 		a();
 	}
