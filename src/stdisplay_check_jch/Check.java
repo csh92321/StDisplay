@@ -52,7 +52,6 @@ public class Check {
 			System.out.println("저장 데이터 없음");
 	}
 	public void regster() {
-		BSt b = new BSt();
 		String name, addr;
 
 		if(arr.size() != 0) {

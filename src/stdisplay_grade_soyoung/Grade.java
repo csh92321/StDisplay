@@ -2,12 +2,14 @@ package stdisplay_grade_soyoung;
 
 import java.util.Scanner;
 
+import stdisplay.Stdisplay;
 import stdisplay.StudentInfo;
 
 public class Grade {
 
 	StudentInfo si = new StudentInfo();
-
+	Stdisplay sd = new Stdisplay();
+	Scanner sc = new Scanner(System.in);
 	
 	public void display() {
 		
@@ -19,7 +21,6 @@ public class Grade {
 			System.out.println("4.메인으로 이동");
 			System.out.print(">> ");
 			
-			Scanner sc = new Scanner(System.in);
 			int choice = sc.nextInt();
 			
 			switch(choice) {
@@ -27,23 +28,32 @@ public class Grade {
 				System.out.print("학생 이름 입력 : ");
 				String stName = sc.next();
 				
-				if (si.getName().equals(stName)) {
-					putGrade();
-				} else {
-					System.out.println(stName+" 학생은 존재하지 않습니다");
+				for(int i=0; i<sd.std.size();i++) {
+					String name = sd.std.get(i).getName();
+					if (name.equals(stName)) {
+						
+						putGrade();
+					} else {
+						System.out.println(stName+" 학생은 존재하지 않습니다");
+					}
+					
 				}
 				break;
 			case 2 : 
 				System.out.print("학생 이름 입력 : ");
 				stName = sc.next();
 				
-				if (si.getName().equals(stName)) {
+				for(int i=0; i<sd.std.size();i++) {
+					String name = sd.std.get(i).getName();
+					if (name.equals(stName)) {
 					System.out.println("<< "+stName+" 학생 성적표 >>");
-					checkGrade();
-				} else {
-					System.out.println(stName + " 학생은 존재하지 않습니다");
+					checkGrade(i);
+					} else {
+						System.out.println(stName + " 학생은 존재하지 않습니다");
+					}
 				}
 				break;
+				
 			case 3 :
 				System.out.print("학생 이름 입력 : ");
 				stName = sc.next();
@@ -62,7 +72,7 @@ public class Grade {
 	}
 	
 	public void putGrade() {
-		Scanner sc = new Scanner(System.in);
+	
 		System.out.print("국어 성적 입력 : ");
 		int kor = sc.nextInt();
 		si.setKor(kor);
@@ -72,17 +82,19 @@ public class Grade {
 		System.out.print("수학 성적 입력 : ");
 		int math = sc.nextInt();
 		si.setKor(math);
+
 		double avg = kor+eng+math /3.0;
 		si.setAvg(avg);
+
+		sd.std.add(si);
 	}
 	
-	public void checkGrade() {
-		System.out.println("국어 : " + si.getKor() + "영어 : " + si.getEng() 
-		+ "수학 : " + si.getMath() + "평균 : " + si.getAge());
+	public void checkGrade(int num) {
+		System.out.println("국어 : " + sd.std.get(num).getKor() + "영어 : " + sd.std.get(num).getEng() 
+		+ "수학 : " + sd.std.get(num).getMath() + "평균 : " + sd.std.get(num).getAge());
 	}
 	
 	public void correctGrade(String subject) {
-		Scanner sc = new Scanner(System.in);
 		
 		if (subject.equals("국어")) {
 			System.out.print("국어 점수 재입력 : ");

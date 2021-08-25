@@ -1,7 +1,6 @@
 package stdisplay_delete_hjm;
 
 import java.util.Scanner;
-
 import stdisplay.Stdisplay;
 import stdisplay.StudentInfo;
 
@@ -12,12 +11,13 @@ public class StdDelete {
 	Stdisplay aa = new Stdisplay();
 
 	public void check() {
+		flag = false;
 		System.out.print("이름 입력 :");
 		String name = scan.next();
-		for (int i = 0; i < aa.getaddr().size(); i++) {
-			StudentInfo d = aa.getaddr().get(i);
+		for (int i = 0; i < aa.getAddr().size(); i++) {
+			StudentInfo d = aa.getAddr().get(i);
 			if (name.equals(d.getName())) {
-				aa.getaddr().remove(i);
+				aa.getAddr().remove(i);
 				System.out.println("삭제완료");
 				flag = true;
 				break;
@@ -25,11 +25,9 @@ public class StdDelete {
 				flag = false;
 			}
 		}
-	}
-
-	public void a() {
 		if (flag != true) {
 			System.out.println("없는 학생 정보");
+
 		}
 	}
 
@@ -37,8 +35,6 @@ public class StdDelete {
 
 		System.out.println("==== 학생 삭제 ====");
 		System.out.println("학생 이름 입력 ");
-		System.out.print(">>>");
 		check();
-		a();
 	}
 }
