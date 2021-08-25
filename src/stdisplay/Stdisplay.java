@@ -10,6 +10,7 @@ public class Stdisplay {
 
 	public static ArrayList<StudentInfo> std = new ArrayList<>();
 
+	// main arraylist에 접근이 불가능해서 메소드로 주소값 리턴하는 메소드
 	public ArrayList<StudentInfo> getAddr() {
 		return std;
 	}
@@ -17,7 +18,6 @@ public class Stdisplay {
 	public void setAddr(ArrayList<StudentInfo> std) {
 		this.std = std;
 	}
-
 	public static void main(String[] args) {
 
 		Scanner scan = new Scanner(System.in);
@@ -27,7 +27,6 @@ public class Stdisplay {
 		Modify mod = new Modify();
 
 		while (true) {
-
 			System.out.println("==== 학생 관리 프로그램====");
 			System.out.println("1.학생 등록 2.학생 확인 3.학생 수정 ");
 			System.out.println("4.학생 삭제 5.성적 관리 6.종료");
@@ -55,11 +54,11 @@ public class Stdisplay {
 			case 5:
 				grade.display();
 				break;
+				//성적 수정
 			case 6:
 				System.out.println("프로그램을 종료합니다.");
 				return;
 			}
 		}
 	}
-
 }
