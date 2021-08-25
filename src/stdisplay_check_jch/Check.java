@@ -44,7 +44,7 @@ public class Check {
 				BSt st = new BSt();
 				System.out.println("이름 : "+st.getName());
 				System.out.println("주소 : "+st.getAddr());
-				System.out.println("---------------------");
+				System.out.println("---------------------"); 
 			}
 		}
 		else
