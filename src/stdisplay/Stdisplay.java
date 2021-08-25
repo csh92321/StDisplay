@@ -3,10 +3,13 @@ package stdisplay;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import stdisplay_registration_joohui.Registration_joohui;
+
 public class Stdisplay {
 	public static void main(String[] args) {
 		
 		ArrayList<StudentInfo> std= new ArrayList<>(); 
+		Registration_joohui re = new Registration_joohui();
 		
 		Scanner scan =new Scanner(System.in);
 		System.out.println("==== 학생 관리 프로그램====");
@@ -16,6 +19,7 @@ public class Stdisplay {
 		
 		switch(choice) {
 		case 1:
+			re.display();
 			break;
 				//학생등록 / 주희님
 		case 2:
