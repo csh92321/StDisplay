@@ -19,7 +19,6 @@ public class Stdisplay {
 	}
 
 	
-
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);
@@ -41,6 +40,8 @@ public class Stdisplay {
 			break;
 				//학생등록 / 주희님
 		case 2:
+			System.out.println("모든 학생 보기 기능");
+			System.out.println("학생 관리 연결");
 			break;
 			// 학생 확인  / 청하님
 		case 3:
@@ -54,10 +55,10 @@ public class Stdisplay {
 			grade.display();
 			break;
 		case 6:
+			System.out.println("프로그램을 종료합니다.");
 			return;
 		}
 		
-	
 		}
 	}
 }

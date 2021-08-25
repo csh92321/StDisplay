@@ -7,7 +7,7 @@ public class StudentInfo {
 	private int kor, eng, math;
 	private double avg;
 	
-	
+
 	public String getName() {
 		return name;
 	}
@@ -38,12 +38,12 @@ public class StudentInfo {
 	public void setMath(int math) {
 		this.math = math;
 	}
+	
 	public double getAvg() {
 		return avg;
 	}
 	public void setAvg(double avg) {
 		this.avg = avg;
 	}
-	
-	
 }
+
