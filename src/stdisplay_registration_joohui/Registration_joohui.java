@@ -9,7 +9,7 @@ import stdisplay.StudentInfo;
 
 public class Registration_joohui {
 	private ArrayList<StudentInfo> list;
-	StudentInfo st = new StudentInfo();
+	
 	Stdisplay s = new Stdisplay();
 	
 	public Registration_joohui(){	
@@ -24,8 +24,13 @@ public class Registration_joohui {
 		System.out.println("2.목록으로 돌아가기");
 		System.out.print(">>>> : ");
 		num = input.nextInt();
+		for(int i=0; i<s.std.size();i++) {
+			StudentInfo str = s.std.get(i);
+			System.out.println(str.getName());
+		}
 		switch(num) {
 		case 1:
+		StudentInfo st = new StudentInfo();
 		System.out.println("학생 등록을 시작합니다.");
 		System.out.println("이름 : ");
 		String name = input.next();
@@ -33,6 +38,10 @@ public class Registration_joohui {
 		int age = input.nextInt();
 		st.setName(name); st.setAge(age);
 		s.std.add(st);
+		for(int i=0; i<s.std.size();i++) {
+			StudentInfo str = s.std.get(i);
+			System.out.println(str.getName());
+		}
 		System.out.println("등록 되었습니다.");
 		break;
 		

@@ -40,6 +40,7 @@ public class Stdisplay {
 			break;
 				//학생등록 / 주희님
 		case 2:
+			
 			System.out.println("모든 학생 보기 기능");
 			System.out.println("학생 관리 연결");
 			break;
