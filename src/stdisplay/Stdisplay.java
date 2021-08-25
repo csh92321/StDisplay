@@ -10,6 +10,8 @@ import stdisplay_modify_csh.Modify;
 public class Stdisplay {
 	
 	public static  ArrayList<StudentInfo> std = new ArrayList<>();
+	
+	//main arraylist에 접근이 불가능해서 메소드로 주소값 리턴하는 메소드
 	public  ArrayList<StudentInfo> getAddr() {	
 		return std;
 	}
@@ -49,6 +51,7 @@ public class Stdisplay {
 			break;
 			//학생 수정  / 성환님 
 		case 4:
+			hjm.print();
 			break;
 			// 학생 삭제
 		case 5:
