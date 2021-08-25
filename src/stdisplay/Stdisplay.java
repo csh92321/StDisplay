@@ -4,11 +4,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Stdisplay {
+	
+	
+	public static  ArrayList<StudentInfo> std = new ArrayList<>();
+	
+	public  ArrayList<StudentInfo> getAddr() {	
+		return std;
+	}
+	
+	public void setAddr(ArrayList<StudentInfo> std) {
+		this.std = std;
+	}
+	
+
 	public static void main(String[] args) {
 		
-		ArrayList<StudentInfo> std= new ArrayList<>(); 
+		Scanner scan = new Scanner(System.in);
 		
-		Scanner scan =new Scanner(System.in);
 		System.out.println("==== 학생 관리 프로그램====");
 		System.out.println("1.학생 등록 2.학생 확인 3.학생 수정 ");
 		System.out.println("4.학생 삭제 5.성적 관리");
@@ -31,12 +43,9 @@ public class Stdisplay {
 			// 성적 관리 / 소영님
 			break;
 		
+	
 		}
-		
-		
-		
-		
-		
+	
 		
 	
 	}
