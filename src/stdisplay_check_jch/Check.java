@@ -6,14 +6,17 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
+import stdisplay.Stdisplay;
+
 
 public class Check {
+	private static final String std = null;
 	private Scanner scanner;
 	private ArrayList arr;
-	private BSt std;
 	
 	public Check() {
 		scanner = new Scanner(System.in);
+		Stdisplay sd = new Stdisplay();
 		ArrayList arr= new ArrayList();
 		
 	}
@@ -24,15 +27,22 @@ public class Check {
 	public void member() {
 		System.out.println("찾을 학생의 이름을 입력하세요");
 		String stNum = scanner.next();
+		Stdisplay sd = new Stdisplay();
+		
 		if(arr.contains(stNum)) {
-			BSt st = arr(stNum);
-			System.out.println("이름 : "+st.getName());
-			System.out.println("주소 : "+st.getAddr());
+			Std std = arr(stNum);
+			System.out.println("이름 : "+std.getName());
+			System.out.println("주소 : "+std.getAddr());
 		}else{
 			System.out.println("해당 학생은 없습니다.");
 		}
 	}
-	private BSt arr(String stNum) {
+	
+
+
+
+	private Std arr(String stNum) {
+		// TODO Auto-generated method stub
 		return null;
 	}
 
@@ -40,11 +50,11 @@ public class Check {
 
 	public void members() {
 		if(arr.size() != 0) {
-			Iterator<String> it = ((Map<String, BSt>) arr).keySet().iterator();
+			Iterator<String> it = ((Map<String, Std>) arr).keySet().iterator();
 			while(it.hasNext()) {
-				BSt st = new BSt();
-				System.out.println("이름 : "+st.getName());
-				System.out.println("주소 : "+st.getAddr());
+				Std std = new Std();
+				System.out.println("이름 : "+std.getName());
+				System.out.println("주소 : "+std.getAddr());
 				System.out.println("---------------------"); 
 			}
 		}
@@ -76,5 +86,12 @@ public class Check {
 		std.setAddr(addr); std.setName(name);
 
 		System.out.println("저장 완료");
+	}
+
+
+
+	public void display() {
+		// TODO Auto-generated method stub
+		
 	}
 }
